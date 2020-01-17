@@ -1,14 +1,36 @@
 REACT
 =====
-Sources
--------
-1. <https://www.taniarascia.com/getting-started-with-react/>
+
+We can use HTML to structure static content. If we want to create a dynamic structure, we need to be able to change the
+HTML elements somehow. For example, if we want to display a table with dynamic data, we need to parse the data and generate
+table row with the data and then display the table. We can do it using a Javascript function which will take the data as
+argument and return some HTML table row element with the data. We can then attach the returned result to the DOM. 
+
+*So far my understanding is*
+React also does similar things, creating HTML elements and attaching in DOM. 
+
+To create elements it uses two methods- function and class(details are below).
+To attach elements to DOM React provides a function ReactDom.render(). It uses React-DOM which is a virtual DOM (detalis are below).
+
+    
+
 
 #### JSX
 JSX = Javascript + XML
 HTML like syntax inside javascript file.
 React uses JSX but it is not mandatory. Using it helps to read the code and find many errors.
 
+
+## Rendering Element
+Elements are the smallest building blocks of React apps. 
+React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object)[(more about immutability)](https://github.com/badalsarkar/Software-Engineering-Concepts/blob/master/mutability/mutability.md). They can't be changed once created. 
+The only way to update them is to create new element.
+To render an element, you need to pass two things to ReactDOM.render method- the element itself and the DOM node where to 
+render the element.
+`
+const element= <h1>Hello, world</h1>;
+ReactDOM.render(element, document.getElementById('root'));
+`
 
 #### Setting up REACT
 - You can add React CDN and Babel CDN and the srcipt in the HTML file. THis is not the best way as it is difficult to 
@@ -35,15 +57,6 @@ Props are read-only for components. So, components can't change the Props value.
 This is data that can be saved and modified without being added to the database. For example, items added and removed
 from shopping cart.
 
-## Rendering Element
-Elements are the smallest building blocks of React apps. 
-React elements are immutable. They can't be changed once created. The only way to update them is to create new element.
-to render an element, you need to pass two things to ReactDOM.render method- the element itself and the DOM node where to 
-render the element.
-`
-const element= <h1>Hello, world</h1>;
-ReactDOM.render(element, document.getElementById('root'));
-`
 
 ## Components and Props
 Components are re-usable items. They are made of elements. They are javascript function take input and return React 
@@ -77,3 +90,16 @@ setState() function triggers an update in the UI.
 
 ## Forms
 - Controlled Component
+
+
+
+
+
+
+
+
+
+Sources
+-------
+1. <https://www.taniarascia.com/getting-started-with-react/>
+
