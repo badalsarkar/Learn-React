@@ -23,7 +23,7 @@ React uses JSX but it is not mandatory. Using it helps to read the code and find
 
 ## Rendering Element
 Elements are the smallest building blocks of React apps. 
-React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object)[(more about immutability)](https://github.com/badalsarkar/Software-Engineering-Concepts/blob/master/mutability/mutability.md). They can't be changed once created. 
+React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object). They can't be changed once created. 
 The only way to update them is to create new element.
 To render an element, you need to pass two things to ReactDOM.render method- the element itself and the DOM node where to 
 render the element.
