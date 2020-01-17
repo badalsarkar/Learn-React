@@ -21,16 +21,17 @@ HTML like syntax inside javascript file.
 React uses JSX but it is not mandatory. Using it helps to read the code and find many errors.
 
 
-## Rendering Element
+#### Rendering Element
 Elements are the smallest building blocks of React apps. 
-React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object)[(more about immutability)](https://github.com/badalsarkar/Software-Engineering-Concepts/blob/master/mutability/mutability.md). They can't be changed once created. 
+React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object) [(more about mutability)](https://github.com/badalsarkar/Software-Engineering-Concepts/blob/master/mutability/mutability.md). They can't be changed once created. 
 The only way to update them is to create new element.
 To render an element, you need to pass two things to ReactDOM.render method- the element itself and the DOM node where to 
 render the element.
-`
+
+```javascript
 const element= <h1>Hello, world</h1>;
 ReactDOM.render(element, document.getElementById('root'));
-`
+````
 
 #### Setting up REACT
 - You can add React CDN and Babel CDN and the srcipt in the HTML file. THis is not the best way as it is difficult to 
