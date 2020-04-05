@@ -31,7 +31,7 @@ render the element.
 ```javascript
 const element= <h1>Hello, world</h1>;
 ReactDOM.render(element, document.getElementById('root'));
-````
+```
 
 #### Setting up REACT
 - You can add React CDN and Babel CDN and the srcipt in the HTML file. THis is not the best way as it is difficult to 
@@ -59,7 +59,7 @@ This is data that can be saved and modified without being added to the database.
 from shopping cart.
 
 
-## Components and Props
+#### Components and Props
 Components are re-usable items. They are made of elements. They are javascript function take input and return React 
 element describing what should appear in the screen. 
 
@@ -67,10 +67,11 @@ Props are the argument that is passed to component as JSX attributes. When React
 component, it passes the JSX attribute to this component as single object. this object is called "props".
 
 Always start component name with capital letter. Component with lowercase letter is treated as DOM tags.This is realted
-to JSX. To learn more about the reasoning [click here](https://reactjs.org/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized)
+to JSX. To learn more about the reasoning [click here](https://reactjs.org/docs/jsx-in-depth.html#user-defined-components
+        -must-be-capitalized)
 
 
-## State and Lifecycle
+#### State and Lifecycle
 
 State variables are private to the component and mutable. To use state  variable, we need to declare the component as 
 class. We need to add a constructor and call the base constructor with the props
@@ -81,11 +82,15 @@ And "componentWillUnmount()" is called during unmounting.
 
 setState() function triggers an update in the UI.
 
-## Event Handler
+**State update may be asynchronous.** This means that React may batch multiple setState function call together for execution
+for performance reason. Because setState is an asynchronous function, we shouldn't depend on the previous state to calculate
+or derive next state. 
 
-## Conditional Rendering
+#### Event Handler
 
-## Lists and Keys
+#### Conditional Rendering
+
+#### Lists and Keys
 - the use of map() method.
 - use keys in an array of items
 
@@ -102,5 +107,6 @@ setState() function triggers an update in the UI.
 
 Sources
 -------
-1. <https://www.taniarascia.com/getting-started-with-react/>
-
+1. https://www.taniarascia.com/getting-started-with-react/
+2. https://github.com/uberVU/react-guide/blob/master/props-vs-state.md
+3. https://lucybain.com/blog/2016/react-state-vs-pros/
